@@ -1,0 +1,38 @@
+{
+  "scope": "offline fake sandbox/store; no real Docker recovery time, Mongo concurrency or semantic quality measured",
+  "regression": {
+    "sandbox_and_isolation": {
+      "total": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "memory_integration": {
+      "total": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "memory_scaling": [
+    {
+      "records": 10,
+      "raw_brief_characters": 2649,
+      "injected_characters": 2649,
+      "bounded": true
+    },
+    {
+      "records": 100,
+      "raw_brief_characters": 26679,
+      "injected_characters": 4000,
+      "bounded": true
+    },
+    {
+      "records": 300,
+      "raw_brief_characters": 80479,
+      "injected_characters": 4000,
+      "bounded": true
+    }
+  ],
+  "caveat": "Truncation is a size bound, not proven lossless compression or token/cost improvement."
+}

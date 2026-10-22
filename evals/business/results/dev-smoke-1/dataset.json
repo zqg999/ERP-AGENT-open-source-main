@@ -1,0 +1,99 @@
+[
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-lookup-1",
+    "kind": "lookup",
+    "prompt": "查零件ID=191的实际采购单价。不要下单。最终只返回JSON对象，字段part_id、unit_price。",
+    "expected": {
+      "part_id": 191,
+      "unit_price": 287
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-calculation-1",
+    "kind": "calculation",
+    "prompt": "查询零件ID=191实际单价，计算购买193件的金额。不创建订单，不需要图表。最终只返回JSON对象，字段part_id、quantity、total。",
+    "expected": {
+      "part_id": 191,
+      "quantity": 193,
+      "total": 55391
+    }
+  }
+]

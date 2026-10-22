@@ -1,0 +1,12 @@
+{
+  "dataset_sha256": "ee0acd92a33eeb17f1b7c8a0fbc0c79f1ff0de85ab899ee61978ee0a3edd1611",
+  "model": "deepseek-flash",
+  "git_commit": "1b43343c41ae56353721121a9e465912c04a72ec",
+  "scope": "production factory + real model; in-process ERP tool transport; memory Store/checkpointer; StateBackend; unsafe/external tools removed; no MCP SSE/real ERP/Docker validation",
+  "router": "DeepSeek non-thinking; forced for reproducibility",
+  "deadline_seconds": 180,
+  "max_input_output_tokens_soft": 1000000,
+  "dev": true,
+  "planned_tasks": 6,
+  "case_design": "6 templates with numeric variants; not 18 independent business types"
+}

@@ -1,0 +1,17 @@
+{
+  "dataset_sha256": "5239490db7317a65e69841a16b9cc44d2fcdb36a07532e8e46ef00b7fb9bb438",
+  "model": "deepseek-flash",
+  "git_commit": "a2298f8d06a5289e27b1c8a0f5ec1b264d6ef54a",
+  "harness_sha256": {
+    "dataset.py": "8053c6e076a620fc9462a25cdf216d5de5b21194a243fd35c350ee1e7f12fd62",
+    "run.py": "beded6404190cc64cb1ce12768be250da99388daa4384e59a242036346a29bc6",
+    "fixture.py": "aee8c1c14d640ca3a8eec65de18769115d2d963b23c3af0d5d41ec102914b071"
+  },
+  "scope": "production factory + real model; in-process ERP tool transport; memory Store/checkpointer; StateBackend; unsafe/external tools removed; no MCP SSE/real ERP/Docker validation",
+  "router": "DeepSeek non-thinking; forced for reproducibility",
+  "deadline_seconds": 180,
+  "max_input_output_tokens_soft": 1000000,
+  "dev": false,
+  "planned_tasks": 18,
+  "case_design": "6 templates with numeric variants; not 18 independent business types"
+}

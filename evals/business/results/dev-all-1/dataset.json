@@ -1,0 +1,292 @@
+[
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-lookup-1",
+    "kind": "lookup",
+    "prompt": "查零件ID=191的实际采购单价。不要下单。最终只返回JSON对象，字段part_id、unit_price。",
+    "expected": {
+      "part_id": 191,
+      "unit_price": 287
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-calculation-1",
+    "kind": "calculation",
+    "prompt": "查询零件ID=191实际单价，计算购买193件的金额。不创建订单，不需要图表。最终只返回JSON对象，字段part_id、quantity、total。",
+    "expected": {
+      "part_id": 191,
+      "quantity": 193,
+      "total": 55391
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-stock-1",
+    "kind": "stock",
+    "prompt": "要领用680件测试制动片90，请查库存，计算还缺多少件。不执行出库、不下单、不画图。最终只返回JSON对象，字段available、shortage。",
+    "expected": {
+      "available": 671,
+      "shortage": 9
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-missing-1",
+    "kind": "missing",
+    "prompt": "为零件ID=191创建订单，订单号EVAL-MISSING-90，单价287元，但数量还没确定。请先向我询问数量，不要猜数量或创建订单。",
+    "expected": null
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-approve-1",
+    "kind": "approve",
+    "prompt": "请创建采购订单：订单号EVAL-APPROVE-90，零件ID=191，数量193，单价287元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-APPROVE-90",
+      "partId": 191,
+      "quantity": 193,
+      "unitPrice": 287
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 191,
+          "partCode": "EVAL-191",
+          "name": "测试制动片90",
+          "purchasePrice": 287,
+          "supplierId": 291,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 391,
+          "partId": 191,
+          "currentQuantity": 671,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 191,
+            "partCode": "EVAL-191",
+            "name": "测试制动片90",
+            "purchasePrice": 287,
+            "supplierId": 291,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 291,
+          "name": "测试供应商90",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 191,
+    "qty": 193,
+    "price": 287,
+    "id": "dev-reject-1",
+    "kind": "reject",
+    "prompt": "请创建采购订单：订单号EVAL-REJECT-90，零件ID=191，数量193，单价287元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-REJECT-90",
+      "partId": 191,
+      "quantity": 193,
+      "unitPrice": 287
+    }
+  }
+]

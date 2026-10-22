@@ -1,0 +1,51 @@
+{
+  "overall": {
+    "passed": 18,
+    "total": 18,
+    "pass_rate": 1.0,
+    "p95_seconds_nearest_rank": 14.142
+  },
+  "categories": {
+    "exact_stock": {
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 1.0,
+      "p95_seconds_nearest_rank": 5.894
+    },
+    "multi_total": {
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 1.0,
+      "p95_seconds_nearest_rank": 14.142
+    },
+    "not_found": {
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 1.0,
+      "p95_seconds_nearest_rank": 12.121
+    },
+    "sufficient": {
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 1.0,
+      "p95_seconds_nearest_rank": 4.249
+    },
+    "supplier": {
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 1.0,
+      "p95_seconds_nearest_rank": 5.761
+    },
+    "zero_stock": {
+      "passed": 3,
+      "total": 3,
+      "pass_rate": 1.0,
+      "p95_seconds_nearest_rank": 4.592
+    }
+  },
+  "model_responses": 75,
+  "responses_missing_usage": 0,
+  "input_tokens": 567012,
+  "output_tokens": 16416,
+  "preapproval_write_attempts": 0
+}

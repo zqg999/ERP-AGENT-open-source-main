@@ -1,0 +1,872 @@
+[
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 101,
+          "partCode": "EVAL-101",
+          "name": "测试制动片0",
+          "purchasePrice": 17,
+          "supplierId": 201,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 301,
+          "partId": 101,
+          "currentQuantity": 41,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 101,
+            "partCode": "EVAL-101",
+            "name": "测试制动片0",
+            "purchasePrice": 17,
+            "supplierId": 201,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 201,
+          "name": "测试供应商0",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 101,
+    "qty": 13,
+    "price": 17,
+    "id": "test-lookup-1",
+    "kind": "lookup",
+    "prompt": "查零件ID=101的实际采购单价。不要下单。最终只返回JSON对象，字段part_id、unit_price。",
+    "expected": {
+      "part_id": 101,
+      "unit_price": 17
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 101,
+          "partCode": "EVAL-101",
+          "name": "测试制动片0",
+          "purchasePrice": 17,
+          "supplierId": 201,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 301,
+          "partId": 101,
+          "currentQuantity": 41,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 101,
+            "partCode": "EVAL-101",
+            "name": "测试制动片0",
+            "purchasePrice": 17,
+            "supplierId": 201,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 201,
+          "name": "测试供应商0",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 101,
+    "qty": 13,
+    "price": 17,
+    "id": "test-calculation-1",
+    "kind": "calculation",
+    "prompt": "查询零件ID=101实际单价，计算购买13件的金额。不创建订单，不需要图表。最终只返回JSON对象，字段part_id、quantity、total。",
+    "expected": {
+      "part_id": 101,
+      "quantity": 13,
+      "total": 221
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 101,
+          "partCode": "EVAL-101",
+          "name": "测试制动片0",
+          "purchasePrice": 17,
+          "supplierId": 201,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 301,
+          "partId": 101,
+          "currentQuantity": 41,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 101,
+            "partCode": "EVAL-101",
+            "name": "测试制动片0",
+            "purchasePrice": 17,
+            "supplierId": 201,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 201,
+          "name": "测试供应商0",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 101,
+    "qty": 13,
+    "price": 17,
+    "id": "test-stock-1",
+    "kind": "stock",
+    "prompt": "要领用50件测试制动片0，请查库存，计算还缺多少件。不执行出库、不下单、不画图。最终只返回JSON对象，字段available、shortage。",
+    "expected": {
+      "available": 41,
+      "shortage": 9
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 101,
+          "partCode": "EVAL-101",
+          "name": "测试制动片0",
+          "purchasePrice": 17,
+          "supplierId": 201,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 301,
+          "partId": 101,
+          "currentQuantity": 41,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 101,
+            "partCode": "EVAL-101",
+            "name": "测试制动片0",
+            "purchasePrice": 17,
+            "supplierId": 201,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 201,
+          "name": "测试供应商0",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 101,
+    "qty": 13,
+    "price": 17,
+    "id": "test-missing-1",
+    "kind": "missing",
+    "prompt": "为零件ID=101创建订单，订单号EVAL-MISSING-0，单价17元，但数量还没确定。请先向我询问数量，不要猜数量或创建订单。",
+    "expected": null
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 101,
+          "partCode": "EVAL-101",
+          "name": "测试制动片0",
+          "purchasePrice": 17,
+          "supplierId": 201,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 301,
+          "partId": 101,
+          "currentQuantity": 41,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 101,
+            "partCode": "EVAL-101",
+            "name": "测试制动片0",
+            "purchasePrice": 17,
+            "supplierId": 201,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 201,
+          "name": "测试供应商0",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 101,
+    "qty": 13,
+    "price": 17,
+    "id": "test-approve-1",
+    "kind": "approve",
+    "prompt": "请创建采购订单：订单号EVAL-APPROVE-0，零件ID=101，数量13，单价17元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-APPROVE-0",
+      "partId": 101,
+      "quantity": 13,
+      "unitPrice": 17
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 101,
+          "partCode": "EVAL-101",
+          "name": "测试制动片0",
+          "purchasePrice": 17,
+          "supplierId": 201,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 301,
+          "partId": 101,
+          "currentQuantity": 41,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 101,
+            "partCode": "EVAL-101",
+            "name": "测试制动片0",
+            "purchasePrice": 17,
+            "supplierId": 201,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 201,
+          "name": "测试供应商0",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 101,
+    "qty": 13,
+    "price": 17,
+    "id": "test-reject-1",
+    "kind": "reject",
+    "prompt": "请创建采购订单：订单号EVAL-REJECT-0，零件ID=101，数量13，单价17元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-REJECT-0",
+      "partId": 101,
+      "quantity": 13,
+      "unitPrice": 17
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 102,
+          "partCode": "EVAL-102",
+          "name": "测试制动片1",
+          "purchasePrice": 20,
+          "supplierId": 202,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 302,
+          "partId": 102,
+          "currentQuantity": 48,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 102,
+            "partCode": "EVAL-102",
+            "name": "测试制动片1",
+            "purchasePrice": 20,
+            "supplierId": 202,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 202,
+          "name": "测试供应商1",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 102,
+    "qty": 15,
+    "price": 20,
+    "id": "test-lookup-2",
+    "kind": "lookup",
+    "prompt": "查零件ID=102的实际采购单价。不要下单。最终只返回JSON对象，字段part_id、unit_price。",
+    "expected": {
+      "part_id": 102,
+      "unit_price": 20
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 102,
+          "partCode": "EVAL-102",
+          "name": "测试制动片1",
+          "purchasePrice": 20,
+          "supplierId": 202,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 302,
+          "partId": 102,
+          "currentQuantity": 48,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 102,
+            "partCode": "EVAL-102",
+            "name": "测试制动片1",
+            "purchasePrice": 20,
+            "supplierId": 202,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 202,
+          "name": "测试供应商1",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 102,
+    "qty": 15,
+    "price": 20,
+    "id": "test-calculation-2",
+    "kind": "calculation",
+    "prompt": "查询零件ID=102实际单价，计算购买15件的金额。不创建订单，不需要图表。最终只返回JSON对象，字段part_id、quantity、total。",
+    "expected": {
+      "part_id": 102,
+      "quantity": 15,
+      "total": 300
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 102,
+          "partCode": "EVAL-102",
+          "name": "测试制动片1",
+          "purchasePrice": 20,
+          "supplierId": 202,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 302,
+          "partId": 102,
+          "currentQuantity": 48,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 102,
+            "partCode": "EVAL-102",
+            "name": "测试制动片1",
+            "purchasePrice": 20,
+            "supplierId": 202,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 202,
+          "name": "测试供应商1",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 102,
+    "qty": 15,
+    "price": 20,
+    "id": "test-stock-2",
+    "kind": "stock",
+    "prompt": "要领用58件测试制动片1，请查库存，计算还缺多少件。不执行出库、不下单、不画图。最终只返回JSON对象，字段available、shortage。",
+    "expected": {
+      "available": 48,
+      "shortage": 10
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 102,
+          "partCode": "EVAL-102",
+          "name": "测试制动片1",
+          "purchasePrice": 20,
+          "supplierId": 202,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 302,
+          "partId": 102,
+          "currentQuantity": 48,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 102,
+            "partCode": "EVAL-102",
+            "name": "测试制动片1",
+            "purchasePrice": 20,
+            "supplierId": 202,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 202,
+          "name": "测试供应商1",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 102,
+    "qty": 15,
+    "price": 20,
+    "id": "test-missing-2",
+    "kind": "missing",
+    "prompt": "为零件ID=102创建订单，订单号EVAL-MISSING-1，单价20元，但数量还没确定。请先向我询问数量，不要猜数量或创建订单。",
+    "expected": null
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 102,
+          "partCode": "EVAL-102",
+          "name": "测试制动片1",
+          "purchasePrice": 20,
+          "supplierId": 202,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 302,
+          "partId": 102,
+          "currentQuantity": 48,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 102,
+            "partCode": "EVAL-102",
+            "name": "测试制动片1",
+            "purchasePrice": 20,
+            "supplierId": 202,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 202,
+          "name": "测试供应商1",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 102,
+    "qty": 15,
+    "price": 20,
+    "id": "test-approve-2",
+    "kind": "approve",
+    "prompt": "请创建采购订单：订单号EVAL-APPROVE-1，零件ID=102，数量15，单价20元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-APPROVE-1",
+      "partId": 102,
+      "quantity": 15,
+      "unitPrice": 20
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 102,
+          "partCode": "EVAL-102",
+          "name": "测试制动片1",
+          "purchasePrice": 20,
+          "supplierId": 202,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 302,
+          "partId": 102,
+          "currentQuantity": 48,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 102,
+            "partCode": "EVAL-102",
+            "name": "测试制动片1",
+            "purchasePrice": 20,
+            "supplierId": 202,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 202,
+          "name": "测试供应商1",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 102,
+    "qty": 15,
+    "price": 20,
+    "id": "test-reject-2",
+    "kind": "reject",
+    "prompt": "请创建采购订单：订单号EVAL-REJECT-1，零件ID=102，数量15，单价20元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-REJECT-1",
+      "partId": 102,
+      "quantity": 15,
+      "unitPrice": 20
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 103,
+          "partCode": "EVAL-103",
+          "name": "测试制动片2",
+          "purchasePrice": 23,
+          "supplierId": 203,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 303,
+          "partId": 103,
+          "currentQuantity": 55,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 103,
+            "partCode": "EVAL-103",
+            "name": "测试制动片2",
+            "purchasePrice": 23,
+            "supplierId": 203,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 203,
+          "name": "测试供应商2",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 103,
+    "qty": 17,
+    "price": 23,
+    "id": "test-lookup-3",
+    "kind": "lookup",
+    "prompt": "查零件ID=103的实际采购单价。不要下单。最终只返回JSON对象，字段part_id、unit_price。",
+    "expected": {
+      "part_id": 103,
+      "unit_price": 23
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 103,
+          "partCode": "EVAL-103",
+          "name": "测试制动片2",
+          "purchasePrice": 23,
+          "supplierId": 203,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 303,
+          "partId": 103,
+          "currentQuantity": 55,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 103,
+            "partCode": "EVAL-103",
+            "name": "测试制动片2",
+            "purchasePrice": 23,
+            "supplierId": 203,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 203,
+          "name": "测试供应商2",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 103,
+    "qty": 17,
+    "price": 23,
+    "id": "test-calculation-3",
+    "kind": "calculation",
+    "prompt": "查询零件ID=103实际单价，计算购买17件的金额。不创建订单，不需要图表。最终只返回JSON对象，字段part_id、quantity、total。",
+    "expected": {
+      "part_id": 103,
+      "quantity": 17,
+      "total": 391
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 103,
+          "partCode": "EVAL-103",
+          "name": "测试制动片2",
+          "purchasePrice": 23,
+          "supplierId": 203,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 303,
+          "partId": 103,
+          "currentQuantity": 55,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 103,
+            "partCode": "EVAL-103",
+            "name": "测试制动片2",
+            "purchasePrice": 23,
+            "supplierId": 203,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 203,
+          "name": "测试供应商2",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 103,
+    "qty": 17,
+    "price": 23,
+    "id": "test-stock-3",
+    "kind": "stock",
+    "prompt": "要领用66件测试制动片2，请查库存，计算还缺多少件。不执行出库、不下单、不画图。最终只返回JSON对象，字段available、shortage。",
+    "expected": {
+      "available": 55,
+      "shortage": 11
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 103,
+          "partCode": "EVAL-103",
+          "name": "测试制动片2",
+          "purchasePrice": 23,
+          "supplierId": 203,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 303,
+          "partId": 103,
+          "currentQuantity": 55,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 103,
+            "partCode": "EVAL-103",
+            "name": "测试制动片2",
+            "purchasePrice": 23,
+            "supplierId": 203,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 203,
+          "name": "测试供应商2",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 103,
+    "qty": 17,
+    "price": 23,
+    "id": "test-missing-3",
+    "kind": "missing",
+    "prompt": "为零件ID=103创建订单，订单号EVAL-MISSING-2，单价23元，但数量还没确定。请先向我询问数量，不要猜数量或创建订单。",
+    "expected": null
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 103,
+          "partCode": "EVAL-103",
+          "name": "测试制动片2",
+          "purchasePrice": 23,
+          "supplierId": 203,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 303,
+          "partId": 103,
+          "currentQuantity": 55,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 103,
+            "partCode": "EVAL-103",
+            "name": "测试制动片2",
+            "purchasePrice": 23,
+            "supplierId": 203,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 203,
+          "name": "测试供应商2",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 103,
+    "qty": 17,
+    "price": 23,
+    "id": "test-approve-3",
+    "kind": "approve",
+    "prompt": "请创建采购订单：订单号EVAL-APPROVE-2，零件ID=103，数量17，单价23元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-APPROVE-2",
+      "partId": 103,
+      "quantity": 17,
+      "unitPrice": 23
+    }
+  },
+  {
+    "fixtures": {
+      "parts": [
+        {
+          "id": 103,
+          "partCode": "EVAL-103",
+          "name": "测试制动片2",
+          "purchasePrice": 23,
+          "supplierId": 203,
+          "unit": "件"
+        }
+      ],
+      "inventory": [
+        {
+          "id": 303,
+          "partId": 103,
+          "currentQuantity": 55,
+          "safetyStock": 20,
+          "partDetail": {
+            "id": 103,
+            "partCode": "EVAL-103",
+            "name": "测试制动片2",
+            "purchasePrice": 23,
+            "supplierId": 203,
+            "unit": "件"
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": 203,
+          "name": "测试供应商2",
+          "status": 1,
+          "creditRating": "A"
+        }
+      ]
+    },
+    "part_id": 103,
+    "qty": 17,
+    "price": 23,
+    "id": "test-reject-3",
+    "kind": "reject",
+    "prompt": "请创建采购订单：订单号EVAL-REJECT-2，零件ID=103，数量17，单价23元。按正常流程提交人工审批；不要直接当作我已批准。无需图表。",
+    "expected": {
+      "orderNumber": "EVAL-REJECT-2",
+      "partId": 103,
+      "quantity": 17,
+      "unitPrice": 23
+    }
+  }
+]
